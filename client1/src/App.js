@@ -6,6 +6,7 @@ import FunFact from "./components/screens/FunFact";
 import Maps from "./components/screens/Maps";
 import FindPets from "./components/screens/FindPets";
 import { BrowserRouter, Route } from "react-router-dom";
+import Ebay from "./components/screens/Ebay";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       <Navbar />
       <Route exact path="/">
         <Home />
+      </Route>
+      <Route path="/ebay">
+        <Ebay />
       </Route>
       <Route path="/maps">
         <Maps />

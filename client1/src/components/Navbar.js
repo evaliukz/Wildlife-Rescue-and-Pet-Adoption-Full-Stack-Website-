@@ -11,6 +11,7 @@ const Navb = () => {
       <Nav className="mr-auto"></Nav>
       <Nav>
         <Nav.Link href="findPets">Find Pets</Nav.Link>
+        <Nav.Link href="ebay">Ebay</Nav.Link>
         <Nav.Link href="maps">Maps</Nav.Link>
         <Nav.Link href="funfact">FunFacts</Nav.Link>
       </Nav>
