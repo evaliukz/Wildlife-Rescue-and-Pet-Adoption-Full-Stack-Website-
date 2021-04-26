@@ -1,7 +1,7 @@
 module.exports = {
-  host: "127.0.0.1",
+  host: "cis550-pet.cwie7u41bgqd.us-east-1.rds.amazonaws.com",
   port: "3306",
-  user: "root",
-  password: "102605218",
-  database: "final",
+  user: "diihuu",
+  password: "Learning2021",
+  database: "pets",
 };
