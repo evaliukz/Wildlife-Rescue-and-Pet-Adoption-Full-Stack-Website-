@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.brand {
+  font-family: "Pacifico", cursive;
+  font-size: x-large;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.center {
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.ebayaAnimals {
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (min-width: 1500px) {
+  .modal-dialog {
+    max-width: 1500px !important;
+  }
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 80vw !important;
+    margin: 1.75rem auto;
+  }
+}
+
+/* .card {
+  min-width: auto !important;
+  width: 600px !important;
+  height: auto !important;
+} */
+
+@media (min-width: 576px) {
+  .card-group > .card {
+    flex: 1 0;
+    margin-right: 10px !important;
+    margin-bottom: 10px !important;
+    min-width: 250px !important;
+    padding-bottom: 50px !important;
+  }
+}
+
+.ebayCategory {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.categoryCard {
+  margin-left: 15px;
+  margin-bottom: 5px;
+  height: 300px;
+  width: 300px;
+}
+.c_card {
+  height: 150px;
+  width: auto;
+}
+
+.ebayCard {
+  height: 500px !important;
+}
+
+.cardgroup {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-around !important;
+}
+.card-img-top {
+  border-radius: 10% !important;
+  border: 1px solid #ddd !important;
+  padding: 15px;
+}

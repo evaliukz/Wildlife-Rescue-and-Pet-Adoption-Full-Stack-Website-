@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Modal, Card, CardGroup } from "react-bootstrap";
-
+import "./EbayCard.css";
 const EbayModal = ({ show, data, onHide }) => {
   return (
     <div>

@@ -7,6 +7,7 @@ import {
   InfoWindow,
 } from "@react-google-maps/api";
 import MyModal from "./MyModal";
+import "./EbayCard.css";
 
 const MapContainer = () => {
   const [animalInfo, setanimalInfo] = useState([]);

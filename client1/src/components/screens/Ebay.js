@@ -1,6 +1,7 @@
 import { Button, Collapse } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import EbayModal from "./EbayModal";
+import "./EbayCard.css";
 
 const Ebay = () => {
   const [petID, setpetID] = useState("");
