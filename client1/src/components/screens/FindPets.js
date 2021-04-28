@@ -84,6 +84,14 @@ const showSaved = () => {
           My saved
         </Button>
         </div>
+        <div id="movingImages">
+          <img id="cat1" src="/cat1.png"/>
+          <img id="cat2" src="/cat2.png"/>
+          <img id="cat3" src="/cat3.png"/>
+          <img id="dog1" src="/dog1.png"/>
+          <img id="dog2" src="/dog2.png"/>
+          <img id="dog3" src="/dog3.png"/>
+        </div>
         <div className="tinderCards">
           <div className="tinderCards_cardContainer">
             {animalInfo.map((pet) => (
