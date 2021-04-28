@@ -1,0 +1,13 @@
+@media (min-width: 400px) {
+    .modal-dialog {
+        max-width: 800px !important;
+        margin: 1.75rem auto;
+    }
+}
+img{
+    object-fit: cover;
+}
+.h5 {
+    font-size: 1.15rem !important;
+}
+
