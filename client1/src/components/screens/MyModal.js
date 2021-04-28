@@ -8,7 +8,7 @@ const MyModal = ({ show, data, onHide }) => {
     }
     var t = txt.split(", {")[0].substring(112, 198);
     // var obj = JSON.parse(t);
-    console.log(t);
+    // console.log(t);
     return t;
   };
   return (

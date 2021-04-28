@@ -140,7 +140,7 @@ const MapContainer = () => {
                       if (loca.lat === loca2.lat && loca.lng === loca2.lng) {
                         // console.log(loca);
                         setShow(true);
-                        console.log(value);
+
                         setInfoWindow(value);
                       }
                     });
