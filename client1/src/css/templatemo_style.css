@@ -96,9 +96,16 @@ body {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-size: 13px;
   color: #666666;
+}
+div#funfact {
+  margin-left: 150px;
+  padding: 0;
+  line-height: 1.5em;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #666666;
   background: #1f202a url(./images/templatemo_body.jpg) top center no-repeat;
 }
-
 a:link,
 a:visited {
   color: #fff1cc;
