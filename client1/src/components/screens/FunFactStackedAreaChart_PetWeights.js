@@ -8,6 +8,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  Scatter,
 } from "recharts";
 /*tutorial: https://medium.com/@kevinlohier.kl/how-to-fetch-apis-in-react-and-effectively-use-data-responses-to-create-graphs-using-recharts-5a4eea4b5184
 useState is a react hook which allows functional components to manage react states.
@@ -25,7 +26,7 @@ export default function FunFactStackedAreaChart() {
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
-    fetch("http://localhost:8081/query/funfact6", {
+    fetch("http://localhost:8081/query/funfact3", {
       method: "GET", // The type of HTTP request.
     })
       .then((res) => res.json())
@@ -62,16 +63,29 @@ export default function FunFactStackedAreaChart() {
         }}
       >
         <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='state1' interval ={0} name = "state"/>
+        <XAxis dataKey='state' interval={0} name='State' />
         <YAxis />
         <Tooltip />
         <Area
           type='monotone'
-          dataKey='income'
+          dataKey='indexScore'
+          stackId='1'
+          stroke='#ffb3d9'
+          fill='#ffb3d9'
+          name='Index Score'
+        />
+
+        <CartesianGrid strokeDasharray='3 3' />
+        <XAxis dataKey='state' interval={0} name='State' />
+        <YAxis />
+        <Tooltip />
+        <Area
+          type='monotone'
+          dataKey='Size_Score'
           stackId='2'
           stroke='#8884d8'
           fill='#8884d8'
-          name = 'Income in thousands'
+          name='Size Score'
         />
 
         <CartesianGrid strokeDasharray='3 3' />
@@ -80,24 +94,13 @@ export default function FunFactStackedAreaChart() {
         <Tooltip />
         <Area
           type='monotone'
-          dataKey='population'
+          dataKey='Family_Weight'
           stackId='1'
           stroke='#80ffbf'
           fill='#80ffbf'
-          name = 'Population in thousands'
+          name='Family Weight'
         />
-        <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='state1' interval={0} width={30} />
-        <YAxis />
-        <Tooltip />
-        <Area
-          type='monotone'
-          dataKey='animal'
-          stackId='3'
-          stroke='#ffb3d9'
-          fill='#ffb3d9'
-          name = 'Animal for adoption'
-        />
+
         <Legend />
       </AreaChart>
     </div>

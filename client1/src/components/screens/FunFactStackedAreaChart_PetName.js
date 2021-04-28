@@ -25,7 +25,7 @@ export default function FunFactStackedAreaChart() {
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
-    fetch("http://localhost:8081/query/funfact6", {
+    fetch("http://localhost:8081/query/funfact4", {
       method: "GET", // The type of HTTP request.
     })
       .then((res) => res.json())
@@ -62,16 +62,16 @@ export default function FunFactStackedAreaChart() {
         }}
       >
         <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='state1' interval ={0} name = "state"/>
+        <XAxis dataKey='name1' interval={0} name='Pet Names' />
         <YAxis />
         <Tooltip />
         <Area
           type='monotone'
-          dataKey='income'
+          dataKey='count_dog'
           stackId='2'
           stroke='#8884d8'
           fill='#8884d8'
-          name = 'Income in thousands'
+          name='Number of Dogs'
         />
 
         <CartesianGrid strokeDasharray='3 3' />
@@ -80,24 +80,13 @@ export default function FunFactStackedAreaChart() {
         <Tooltip />
         <Area
           type='monotone'
-          dataKey='population'
+          dataKey='count_cat'
           stackId='1'
           stroke='#80ffbf'
           fill='#80ffbf'
-          name = 'Population in thousands'
+          name='Number of Cats'
         />
-        <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='state1' interval={0} width={30} />
-        <YAxis />
-        <Tooltip />
-        <Area
-          type='monotone'
-          dataKey='animal'
-          stackId='3'
-          stroke='#ffb3d9'
-          fill='#ffb3d9'
-          name = 'Animal for adoption'
-        />
+
         <Legend />
       </AreaChart>
     </div>

@@ -1,24 +1,31 @@
 import React from "react";
-import FunFactPercentRadarChart from "./FunFactPercentRadarChart";
-import FunFactScatterChartLine from "./FunFactScatterChartLine";
 import FunFactStackedAreaChart from "./FunFactStackedAreaChart";
-import FunfactPie from "./FunFactPie";
-
+import FunFactStackedAreaChartPetWeights from "./FunFactStackedAreaChart_PetWeights";
+import FunFactStackedAreaChartPetName from "./FunFactStackedAreaChart_PetName";
+import FunFactStackedBarChartColors from "./FunFactStackedBarChart_Colors";
 const FunFact = () => {
   return (
     <div>
-      <h1>this is the fun facts page</h1>
-      <h2> 1. Radar distribution</h2>
-      <FunFactPercentRadarChart/>
+      <h1>
+        If you’re looking for the most interesting list of animal facts, you’re
+        at the right place!
+      </h1>
 
-      <h2> 2. ScatterChartLine</h2>
-      <FunFactScatterChartLine/>
+      <h5> Here are the most common names for Dogs and Cats!!!</h5>
+      <FunFactStackedAreaChartPetName />
 
-      <h2> 3. StackedAreaChart</h2>
-      <FunFactStackedAreaChart/>
-      
-      <h2> 4. Pie</h2>
-      <FunfactPie/>
+      <h5>Do people abandon their pets because of colors? </h5>
+      <FunFactStackedBarChartColors />
+
+      <h5> Which states have more over-sized animals being abandoned?</h5>
+      <FunFactStackedAreaChartPetWeights />
+
+      <h5>
+        {" "}
+        Let's explore the relation among the Annual Gross Income, Population,
+        and Pets for Adoption in each state!
+      </h5>
+      <FunFactStackedAreaChart />
     </div>
   );
 };

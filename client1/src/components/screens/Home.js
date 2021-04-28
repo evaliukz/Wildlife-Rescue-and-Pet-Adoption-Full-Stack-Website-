@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import HomeSlider from "./HomeSlider";
+import "../../css/templatemo_style.css";
 
 const Home = () => {
   return (
-    <div>
+    <div class='body'>
       <div>
         <HomeSlider />
       </div>

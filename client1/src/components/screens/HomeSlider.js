@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import data from "./HomeSlidersData";
 import Card from "./HomeSliderCard";
-import "../../App.css";
+import "../../css/templatemo_style.css";
 
 class HomeSlider extends Component {
   //constructor
@@ -27,26 +27,27 @@ class HomeSlider extends Component {
   render() {
     const { properties, property } = this.state;
     return (
-      <div className='App'>
-        <button
-          onClick={() => this.prevProperty()}
-          disabled={property.index === 0}
-        >
-          {" "}
-          Prev{" "}
-        </button>
-        <button
-          onClick={() => this.nextProperty()}
-          disabled={property.index === data.properties.length - 1}
-        >
-          {" "}
-          Next{" "}
-        </button>
-
-        <div className='page'>
+      <div className='body'>
+        <div className='body'>
           <section>
-            <h1> “The Earth is a fine place and worth fighting for.” </h1>
-            <h1>—Ernest Hemingway</h1>
+            <h1>
+              {" "}
+              “The Earth is a fine place and worth fighting for.” —Ernest
+              Hemingway{" "}
+            </h1>
+          </section>
+          <section>
+            <button
+              className='button1'
+              onClick={() => this.prevProperty()}
+              disabled={property.index === 0}
+            />
+
+            <button
+              className='button2'
+              onClick={() => this.nextProperty()}
+              disabled={property.index === data.properties.length - 1}
+            />
           </section>
 
           <div className={`cards-slider active-slide-${property.index}`}>

@@ -1,13 +1,15 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import {
-  AreaChart,
-  Area,
+  BarChart,
+  Bar,
+  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 /*tutorial: https://medium.com/@kevinlohier.kl/how-to-fetch-apis-in-react-and-effectively-use-data-responses-to-create-graphs-using-recharts-5a4eea4b5184
 useState is a react hook which allows functional components to manage react states.
@@ -25,7 +27,7 @@ export default function FunFactStackedAreaChart() {
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
-    fetch("http://localhost:8081/query/funfact6", {
+    fetch("http://localhost:8081/query/funfact2", {
       method: "GET", // The type of HTTP request.
     })
       .then((res) => res.json())
@@ -50,56 +52,27 @@ export default function FunFactStackedAreaChart() {
 
   return (
     <div>
-      <AreaChart
+      <BarChart
         width={1400}
         height={700}
         data={items}
         margin={{
-          top: 10,
+          top: 20,
           right: 30,
-          left: 0,
-          bottom: 0,
+          left: 20,
+          bottom: 5,
         }}
       >
         <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='state1' interval ={0} name = "state"/>
+        <XAxis dataKey='color' interval={0} name='color' />
         <YAxis />
         <Tooltip />
-        <Area
-          type='monotone'
-          dataKey='income'
-          stackId='2'
-          stroke='#8884d8'
-          fill='#8884d8'
-          name = 'Income in thousands'
-        />
-
-        <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='state1' />
-        <YAxis />
-        <Tooltip />
-        <Area
-          type='monotone'
-          dataKey='population'
-          stackId='1'
-          stroke='#80ffbf'
-          fill='#80ffbf'
-          name = 'Population in thousands'
-        />
-        <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='state1' interval={0} width={30} />
-        <YAxis />
-        <Tooltip />
-        <Area
-          type='monotone'
-          dataKey='animal'
-          stackId='3'
-          stroke='#ffb3d9'
-          fill='#ffb3d9'
-          name = 'Animal for adoption'
-        />
+        <Bar dataKey='cat' stackId='a' fill='#8884d8' />
+        <Bar dataKey='dog' stackId='b' fill='#82ca9d' />
+        <Bar dataKey='rabbit' stackId='c' fill='#ffb3d9' />
+        <Bar dataKey='horse' stackId='d' fill='#ffc658' />
         <Legend />
-      </AreaChart>
+      </BarChart>
     </div>
   );
 }
