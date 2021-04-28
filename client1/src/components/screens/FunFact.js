@@ -5,7 +5,7 @@ import FunFactStackedAreaChartPetName from "./FunFactStackedAreaChart_PetName";
 import FunFactStackedBarChartColors from "./FunFactStackedBarChart_Colors";
 const FunFact = () => {
   return (
-    <div>
+    <div id="funfact">
       <h1>
         If you’re looking for the most interesting list of animal facts, you’re
         at the right place!

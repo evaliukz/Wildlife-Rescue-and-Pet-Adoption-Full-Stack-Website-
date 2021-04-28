@@ -1,1 +1,28 @@
 
+button#mapPage {
+    border-style: solid;
+  border-color: #84E7D9;
+  border-radius: 5px;
+  border-width: 4px;
+}
+input:focus, button:focus, select:focus {
+    outline: none;
+    border-style: solid;
+    border-color:#85afaa !important; 
+    border-radius: 5px;
+    border-width: 4px;
+  }
+  button#mapPage{
+    margin-left:5px;
+    font-weight: bold;
+    position: absolute;
+    font:sans-serif;
+    font-size: 18px;
+    height: 35px;
+    background-color: #84E7D9;
+    border-color: #84E7D9;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }

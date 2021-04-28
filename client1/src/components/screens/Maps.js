@@ -98,6 +98,7 @@ const MapContainer = () => {
         <Button
           variant="primary"
           type="submit"
+          id="mapPage"
           onClick={() => {
             getAnimalInfo();
             zipToGeo();
