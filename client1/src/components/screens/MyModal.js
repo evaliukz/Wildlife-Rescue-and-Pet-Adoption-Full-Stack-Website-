@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Modal, Card, CardGroup } from "react-bootstrap";
 import "./EbayCard.css";
+import "./MyModal.css";
 
 const MyModal = ({ show, data, onHide }) => {
   const getPicURL = (txt) => {

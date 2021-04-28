@@ -95,7 +95,7 @@ img#dog1{
 
 }
 @keyframes dog1 {
-  0%   { left:55%; top:25%s;}
+  0%   { left:55%; top:25%;}
   25%  { left:50%; top:50%;}
   50%  { left:70%; top:70%;}
   75%  {left:50%x; top:40%;}
@@ -110,6 +110,7 @@ img#dog2{
 @keyframes dog2 {
   0%   { left:20%; top: 25%;}
   25%  { left:30%; top:30%;}
+  35%  { left:40%; top:40%;}
   50%  { left:50%; top:70%;}
   75%  {left:90%x; top:50%;}
   100% {left:20%; top:25%;}
@@ -117,46 +118,33 @@ img#dog2{
 
 img#dog3{
   position: relative;
-  animation-duration: 16s;
+  animation-duration: 17s;
   animation-name: dog3;
   animation-iteration-count: infinite;
 }
 @keyframes dog3 {
-  0%   { left:85%; top:90%;}
+  0%   { left:85%; top:20%;}
   25%  { left:60%; top:70%;}
-  50%  { left:55%; top:44%;}
+  50%  { left:35%; top:44%;}
   75%  {left:70%x; top:80%;}
-  100% {left:85%; top:90%;}
-}
-img#dog3{
-  position: relative;
-  animation-duration: 20s;
-  animation-name: dog3;
-  animation-iteration-count: infinite;
-}
-@keyframes dog3 {
-  0%   { left:85%; top:90%;}
-  25%  { left:60%; top:70%;}
-  50%  { left:55%; top:44%;}
-  75%  {left:70%x; top:80%;}
-  100% {left:85%; top:90%;}
+  100% {left:85%; top:20%;}
 }
 img#cat1{
   position: relative;
-  animation-duration: 25s;
+  animation-duration: 29s;
   animation-name: cat1;
   animation-iteration-count: infinite;
 }
 @keyframes cat1 {
   0%   { left:80%; top:92%;}
   25%  { left:70%; top:78%;}
-  50%  { left:50%; top:54%;}
+  50%  { left:50%; top:64%;}
   75%  {left:48%x; top:56%;}
   100% {left:80%; top:92%;}
 }
 img#cat2{
   position: relative;
-  animation-duration: 12s;
+  animation-duration: 17s;
   animation-name: cat2;
   animation-iteration-count: infinite;
 }
@@ -169,7 +157,7 @@ img#cat2{
 }
 img#cat3{
   position: relative;
-  animation-duration: 10s;
+  animation-duration: 13s;
   animation-name: cat3;
   animation-iteration-count: infinite;
 }
