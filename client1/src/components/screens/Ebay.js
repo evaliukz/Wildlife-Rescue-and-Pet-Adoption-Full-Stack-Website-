@@ -1,5 +1,5 @@
 import { Button, Collapse } from "react-bootstrap";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import EbayModal from "./EbayModal";
 
 const Ebay = () => {
@@ -11,18 +11,24 @@ const Ebay = () => {
   const [open3, setOpen3] = useState(false);
   const [show, setShow] = useState(false);
 
-  const ebayItems = () => {
-    console.log(petID);
-    console.log(categoryID);
-    fetch("/ebay", {
+  // useEffect(() => {
+  //   // console.log(petID);
+  // }, [petID]);
+  // useEffect(() => {
+  //   // console.log(categoryID);
+  // }, [categoryID]);
+  // useEffect(() => {
+  //   console.log(itemInfo);
+  // }, [itemInfo]);
+
+  const ebayItems = (p_id, c_id) => {
+    console.log(p_id);
+    console.log(c_id);
+    fetch(`/ebay/${p_id}/${c_id}`, {
       method: "post",
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify({
-        petID,
-        categoryID,
-      }),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -60,6 +66,15 @@ const Ebay = () => {
     { pic: "3.5.png", petID: 3, cID: 5, name: "Rabbit Furniture" },
     { pic: "3.6.png", petID: 3, cID: 6, name: "Rabbit Healthcare" },
   ];
+
+  const handelClick = async (pID, cID) => {
+    setpetID(pID); //useState 设置pet ID
+    setcategoryID(cID); //useState 设置 category ID
+    ebayItems(); //根据 petID 和 categ ID 去数据库拿数据
+    // if (itemInfo) {
+    //   setShow(true); // useState 设置 True， 显示返回的数据到  modal 里
+    // }
+  };
 
   return (
     <div>
@@ -113,13 +128,12 @@ const Ebay = () => {
         <div className="ebayCategory">
           {catData.map((item) => {
             return (
-              <Button variant="outline-warning">
+              <Button variant="outline-warning" className="categoryCard">
                 <img
+                  className="c_card"
                   src={item.pic}
-                  onClick={() => {
-                    setpetID(item.petID);
-                    setcategoryID(item.cID);
-                    ebayItems();
+                  onClick={async () => {
+                    ebayItems(item.petID, item.cID);
                     setShow(true);
                   }}
                 />
@@ -133,8 +147,15 @@ const Ebay = () => {
         <div className="ebayCategory">
           {dogData.map((item) => {
             return (
-              <Button variant="outline-light">
-                <img src={item.pic} style={{}} />
+              <Button variant="outline-success" className="categoryCard">
+                <img
+                  className="c_card"
+                  src={item.pic}
+                  onClick={async () => {
+                    ebayItems(item.petID, item.cID);
+                    setShow(true);
+                  }}
+                />
                 <p>{item.name}</p>
               </Button>
             );
@@ -145,15 +166,28 @@ const Ebay = () => {
         <div className="ebayCategory">
           {rabbitData.map((item) => {
             return (
-              <Button variant="outline-light">
-                <img src={item.pic} style={{}} />
+              <Button variant="outline-info" className="categoryCard">
+                <img
+                  className="c_card"
+                  src={item.pic}
+                  onClick={async () => {
+                    ebayItems(item.petID, item.cID);
+                    setShow(true);
+                  }}
+                />
                 <p>{item.name}</p>
               </Button>
             );
           })}
         </div>
       </Collapse>
-      <EbayModal show={show} data={itemInfo} onHide={() => setShow(false)} />
+      <EbayModal
+        show={show}
+        data={itemInfo}
+        onHide={() => {
+          setShow(false);
+        }}
+      />
     </div>
   );
 };
