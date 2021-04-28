@@ -34,6 +34,8 @@ const EbayModal = ({ show, data, onHide }) => {
                   />
                   <Card.Body>
                     <Card.Title>
+                      {item.category_name}
+                      <br />
                       {item.item_name.substring(0, 50) + "..."}
                     </Card.Title>
                     <Card.Text>{"$" + item.pricing}</Card.Text>
