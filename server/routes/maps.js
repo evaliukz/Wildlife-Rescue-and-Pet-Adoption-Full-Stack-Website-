@@ -8,17 +8,33 @@ var connection = mysql.createPool(config);
 
 router.post("/", (req, res) => {
   const { zipCode } = req.body;
-  //   console.log(zipCode);
-  const left = parseInt(zipCode) - 50;
-  const right = parseInt(zipCode) + 50;
+
+  const left = parseInt(zipCode) - 20;
+  const right = parseInt(zipCode) + 20;
+  var query = `
+    SELECT *
+    FROM animalData a JOIN zipcodeMapping z on a.zipcode = z.zip 
+    WHERE z.zip > ${left} and z.zip < ${right} and (a.animal_type = "Dog" or a.animal_type = "Cat" or a.animal_type = "Rabbit")
+  `;
+  connection.query(query, function (err, rows, fields) {
+    if (err) console.log(err);
+    else {
+      res.json(rows);
+    }
+  });
+});
+
+router.post("/zip", (req, res) => {
+  const { zipCode } = req.body;
+  console.log(zipCode);
+
   //   console.log(left);
   //   console.log(right);
   var query = `
-    SELECT *
-    FROM animals
-    WHERE zipcode between '${left}' and '${right}'
-    LIMIT 49
-  `;
+          SELECT latitude, longitude
+          FROM  zipcodeMapping 
+          WHERE zip = '${zipCode}' 
+        `;
   connection.query(query, function (err, rows, fields) {
     if (err) console.log(err);
     else {
