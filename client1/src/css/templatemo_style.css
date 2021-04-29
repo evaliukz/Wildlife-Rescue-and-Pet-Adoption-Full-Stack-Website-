@@ -7,6 +7,17 @@ Garden Template
 http://www.templatemo.com/preview/templatemo_240_garden 
 */
 
+div#top10 {
+  margin: 70px;
+}
+
+div#top10 h2 {
+  font-size: 20px;
+  color: #11bcad;
+  margin: 40px 40px 20px 0px;
+  padding: 0;
+  text-align: left;
+}
 /* #endregion */
 /* #region Card */
 /* Card */
@@ -75,8 +86,8 @@ card {
   border: 2px solid#a1e2d4;
   border-radius: 10px;
   padding: 5px;
-  width: 900px;
-  height: 650px;
+  width: 700px;
+  height: 550px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -99,16 +110,17 @@ body {
 }
 div#funfact {
   margin-left: 150px;
+  margin-bottom: 150px;
+  margin-top: 50px;
   padding: 0;
   line-height: 1.5em;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-size: 13px;
   color: #666666;
-  background: #1f202a url(./images/templatemo_body.jpg) top center no-repeat;
 }
 a:link,
 a:visited {
-  color: #fff1cc;
+  color: rgb(49, 49, 173);
   text-decoration: underline;
   font-weight: normal;
 }
@@ -179,7 +191,7 @@ button {
 
 h1 {
   font-size: 32px;
-  color: #75bcad;
+  color: #11bcad;
   width: 1500px;
   white-space: normal;
   margin: 70px 0 50px 50px;
@@ -187,21 +199,23 @@ h1 {
   font-weight: bold;
 }
 h2 {
-  font-size: 24px;
-  color: #9ddfd0;
+  font-size: 18px;
+  color: #11bcad;
   margin: 40px 40px 20px 0px;
   padding: 0;
   text-align: left;
 }
 h3 {
   font-size: 20px;
-  color: #f9f2d5;
+  color: #666666;
   margin: 0 0 20px 0;
   padding: 0;
   text-align: center;
 }
-div.details h3, div.details h4{
-  color: #bb8;
+div.details h3,
+div.details h4 {
+  color: #11bcad;
+  font-size: 18px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 10px;
@@ -218,7 +232,7 @@ h4 {
 
 h5 {
   font-size: 24px;
-  color: #9ddfd0;
+  color: #55bcad;
   margin: 70px 70px 20px 0px;
   padding: 0;
   text-align: center;
