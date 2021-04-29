@@ -7,24 +7,28 @@ import Maps from "./components/screens/Maps";
 import FindPets from "./components/screens/FindPets";
 import { BrowserRouter, Route } from "react-router-dom";
 import Ebay from "./components/screens/Ebay";
+import Top10ways from "./components/screens/Top10ways";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Route exact path="/">
+      <Route exact path='/'>
         <Home />
       </Route>
-      <Route path="/ebay">
+      <Route exact path='/help'>
+        <Top10ways />
+      </Route>
+      <Route path='/ebay'>
         <Ebay />
       </Route>
-      <Route path="/maps">
+      <Route path='/maps'>
         <Maps />
       </Route>
-      <Route path="/findpets">
+      <Route path='/findpets'>
         <FindPets />
       </Route>
-      <Route path="/funfact">
+      <Route path='/funfact'>
         <FunFact />
       </Route>
     </BrowserRouter>
