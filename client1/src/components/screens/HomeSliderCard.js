@@ -10,8 +10,8 @@ const Card = ({ property }) => {
       <div className='details'>
         <span className='index'>{index + 1}</span>
         <h3>{text}</h3>
-        <h3>{author}</h3>
-        <h3>{location}</h3>
+        <h4>{author}</h4>
+        <h4>{location}</h4>
       </div>
     </div>
   );

@@ -77,10 +77,10 @@ const showSaved = () => {
           <option value="dog">Dog</option>
           <option value="rabbit">Rabbit</option>
         </select>
-        <Button id="petSelect" variant="primary" type="submit" onClick={() => getAnimalInfo()}>
+        <Button id="petSelect" class="find" variant="primary" type="submit" onClick={() => getAnimalInfo()}>
           Try my luck
         </Button>
-        <Button id="showSaved" variant="primary" type="submit" onClick={() => showSaved()}>
+        <Button id="showSaved" class="find" variant="primary" type="submit" onClick={() => showSaved()}>
           My saved
         </Button>
         </div>

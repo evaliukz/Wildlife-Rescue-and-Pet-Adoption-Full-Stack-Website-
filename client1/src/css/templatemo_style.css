@@ -139,6 +139,7 @@ button {
 }
 
 .button1 {
+  border: none;
   display: inline-block;
   width: 70px;
   height: 70px;
@@ -159,6 +160,7 @@ button {
 
 .button2 {
   display: inline-block;
+  border: none;
   width: 70px;
   height: 70px;
   padding: 20px 0 0 42px;
@@ -176,7 +178,7 @@ button {
 }
 
 h1 {
-  font-size: 34px;
+  font-size: 32px;
   color: #75bcad;
   width: 1500px;
   white-space: normal;
@@ -192,15 +194,22 @@ h2 {
   text-align: left;
 }
 h3 {
-  font-size: 21px;
+  font-size: 20px;
   color: #f9f2d5;
   margin: 0 0 20px 0;
   padding: 0;
   text-align: center;
 }
+div.details h3, div.details h4{
+  color: #bb8;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  text-align: left;
+}
 
 h4 {
-  font-size: 21px;
+  font-size: 18px;
   color: #f9f2d5;
   margin: 0 0 20px 0;
   padding: 0;

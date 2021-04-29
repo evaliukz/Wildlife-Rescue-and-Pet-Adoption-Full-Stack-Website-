@@ -41,13 +41,13 @@ input#zipInput, select#Type  {
   font-size: 18px;
   height: 45px;
 }
-input, button, select {
+input, button.find, select {
   border-style: solid;
   border-color: #84E7D9;
   border-radius: 5px;
   border-width: 4px;
 }
-input:focus, button:focus, select:focus {
+input:focus, button.find:focus, select:focus {
   outline: none;
   border-style: solid;
   border-color:#85afaa !important; 

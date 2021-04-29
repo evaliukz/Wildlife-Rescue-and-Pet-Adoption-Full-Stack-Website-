@@ -99,6 +99,7 @@ const MapContainer = () => {
           variant="primary"
           type="submit"
           id="mapPage"
+          class="find"
           onClick={() => {
             getAnimalInfo();
             zipToGeo();
