@@ -1,9 +1,8 @@
 import React from "react";
-import MyComponent from "./StateList";
 
 const Top10ways = () => {
   return (
-    <div>
+    <div id="top10">
       <div>
         <h2>
           {" "}
@@ -26,8 +25,6 @@ const Top10ways = () => {
           organizations and zoos have volunteer programs. You can help clean
           beaches, rescue wild animals or teach visitors.{" "}
         </h2>
-
-        <h4>Contact an animal adoption organization in your state.</h4>
 
         <h2>
           3. Visit. Zoos, aquariums, national parks and wildlife refuges are all
